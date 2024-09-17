@@ -141,3 +141,41 @@ def calculate_column_widths(data, headers, font_name='Helvetica', font_size=10):
                 max_widths[index] = item_width
 
     return max_widths
+
+def make_split_table(data, headers, column_widths, max_rows_per_page=30):
+    """
+    Create a table that splits across multiple pages if necessary.
+
+    :param data: List of lists representing the table data
+    :param headers: List of headers for the table
+    :param column_widths: List of column widths
+    :param max_rows_per_page: Maximum number of rows that can fit on one page
+    :return: List of tables (one per page)
+    """
+
+    tables = []
+    num_rows = len(data)
+    num_pages = (num_rows // max_rows_per_page) + 1
+
+    for i in range(num_pages):
+        start_row = i * max_rows_per_page
+        end_row = start_row + max_rows_per_page
+        chunk = data[start_row:end_row]
+
+        # Include headers on each page
+        chunk_with_headers = [headers] + chunk
+
+        # Create the table for this chunk
+        table = Table(chunk_with_headers, colWidths=column_widths)
+        table.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+            ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
+            ('GRID', (0, 0), (-1, -1), 1, colors.black),
+        ]))
+        tables.append(table)
+
+    return tables

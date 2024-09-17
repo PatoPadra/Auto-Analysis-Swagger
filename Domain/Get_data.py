@@ -18,7 +18,7 @@ def fetch_data_from_sql(server, database, table):
     engine = create_engine(connection_string)
 
     # Fetch data from the database
-    query = f"SELECT * FROM {table}"
+    query = f"SELECT  * FROM {table}"
     df = pd.read_sql(query, engine)
 
-    return df
+    return df,table

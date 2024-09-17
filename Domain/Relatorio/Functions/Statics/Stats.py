@@ -1,5 +1,3 @@
-import os
-import pandas as pd
 
 
 def calculate_stats(df, column):

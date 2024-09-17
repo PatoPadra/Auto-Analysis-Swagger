@@ -3,6 +3,8 @@ import re
 from dateutil import parser
 import logging
 
+## FUNCION EDAD
+
 def string_to_number(file_path, column):
     """
     Convert a specified column in a CSV file to float and save the updated DataFrame back to the same file.
@@ -39,6 +41,37 @@ def add_days_passed_column(df, datetime_column, new_column_name):
 
     return df
 
+
+def Checking_IDS(data, report_dto, added_sections):
+    """
+    Identify columns with all different values (possible IDs) and add them to the report.
+
+    Parameters:
+    - data: DataFrame containing the dataset.
+    - report_dto: ReportDTO object to which the IDs list will be added.
+    - added_sections: List to keep track of added sections in the report.
+
+    Returns:
+    - ids_columns: List of columns identified as possible IDs.
+    """
+    try:
+        # Identify Columns with All Different Values and Create "IDs" List
+        ids_columns = []
+        for column in data.columns:
+            if data[column].nunique() >= 0.94 * len(data):
+                ids_columns.append(column)
+
+        # Add "IDs" List to Report
+        ids_list = ', '.join(ids_columns)
+        report_dto.add_section("Possible IDs", ids_list)
+        added_sections.append("Possible IDs")
+
+        logging.info("Possible IDs section added successfully.")
+        return ids_columns
+
+    except Exception as e:
+        logging.error(f"Failed to identify columns with all different values: {e}")
+        return []
 
 power_mapping = {
     range(17, 21): '18-20',

@@ -1,19 +1,33 @@
 werkzeug - WARNING -  * Debugger is active!
 werkzeug - INFO -  * Debugger PIN: 530-730-226
-root - DEBUG - DataFrame columns: Index(['CPF', 'NASC', 'ESCOLARIDADE', 'ESTADO_CIVIL', 'RENDA_PRESUMIDA',
-       'QTD_Veiculos', 'SEXO', 'COD_PODER_AQUISITIVO', 'Regional', 'Filial',
-       'inicio_treinamento', 'termino_treinamento', 'Entrega_operacao',
-       'Instrutor', 'Fonte', 'Nascimento', 'Idade', 'DataDem',
-       'Status Discovery', 'Tipo Demissao', 'DataAdm', 'Dias Desligue',
-       'Causa Desligue', 'Escolaridade_Jobs', 'Distancia'],
+werkzeug - INFO - 127.0.0.1 - - [17/Sep/2024 09:56:25] "GET /apidocs/ HTTP/1.1" 200 -
+werkzeug - INFO - 127.0.0.1 - - [17/Sep/2024 09:56:36] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+werkzeug - INFO - 127.0.0.1 - - [17/Sep/2024 09:56:36] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+werkzeug - INFO - 127.0.0.1 - - [17/Sep/2024 09:56:36] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+werkzeug - INFO - 127.0.0.1 - - [17/Sep/2024 09:56:36] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+werkzeug - INFO - 127.0.0.1 - - [17/Sep/2024 09:56:37] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+werkzeug - INFO - 127.0.0.1 - - [17/Sep/2024 09:56:37] "GET /apispec_1.json HTTP/1.1" 200 -
+root - DEBUG - DataFrame columns: Index(['COD_CONTRATO', 'DOC', 'DT_RETOMADA', 'VL_MOLICAR_ENTRADA',
+       'DESVALORIZACAO_ENTRADA', 'VL_BNDU', 'MARCA', 'MODELO', 'ANO_MODELO',
+       'PATIO', 'CONSERVACAO_VEICULO', 'VL_VENDA', 'DT_VENDA', 'DIAS_ATRASO',
+       'NOME_PRODUTO', 'QTD_VEICULOS', 'SEXO', 'NASC', 'ESTADO_CIVIL',
+       'ESCOLARIDADE', 'PROFISSAO', 'RENDA_PRESUMIDA', 'COD_PODER_AQUISITIVO',
+       'FLAG_PROP_MOD_PERFIL_MOBILE', 'FLAG_E_COMMERCE',
+       'FLAG_PROP_MOD_PERFIL_COMPRA_INTERNET',
+       'FLAG_PROP_MOD_CACADOR_DESCONTOS', 'FLAG_SEGURO_VEICULO',
+       'FLAG_PROP_MOD_PERFIL_SEGURO_AUTO', 'FLAG_PROP_MOD_PERFIL_FINAN_VEIC',
+       'FLAG_PERFIL_INVESTIDOR', 'SERVIDOR_PUBLICO'],
       dtype='object')
-root - DEBUG - DataFrame length: 8368
+root - DEBUG - DataFrame length: 745
 root - INFO - Introduction section added.
 root - INFO - Column Info section added.
+root - ERROR - Failed to convert columns: 'bool' object has no attribute 'replace'
 root - INFO - Column Info Transformed section added.
-root - INFO - Transformed Columns section added.
+root - ERROR - Failed to add transformed columns section: cannot access local variable 'int_converted_columns' where it is not associated with a value
 root - INFO - Data type sections added.
-root - INFO - Unique values count table added.
+root - INFO - Possible IDs section added successfully.
+root - INFO - Possible ID columns identified: ['COD_CONTRATO', 'DOC', 'VL_MOLICAR_ENTRADA', 'VL_BNDU', 'NASC']
+matplotlib.pyplot - DEBUG - Loaded backend agg version v2.2.
 matplotlib.font_manager - DEBUG - findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0.
 matplotlib.font_manager - DEBUG - findfont: score(FontEntry(fname='C:\\Users\\patri\\AppData\\Roaming\\Python\\Python311\\site-packages\\matplotlib\\mpl-data\\fonts\\ttf\\cmtt10.ttf', name='cmtt10', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
 matplotlib.font_manager - DEBUG - findfont: score(FontEntry(fname='C:\\Users\\patri\\AppData\\Roaming\\Python\\Python311\\site-packages\\matplotlib\\mpl-data\\fonts\\ttf\\STIXSizOneSymReg.ttf', name='STIXSizeOneSym', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
@@ -1151,196 +1165,323 @@ matplotlib.font_manager - DEBUG - findfont: score(FontEntry(fname='C:\\Windows\\
 matplotlib.font_manager - DEBUG - findfont: score(FontEntry(fname='C:\\Windows\\Fonts\\Candaral.ttf', name='Candara', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
 matplotlib.font_manager - DEBUG - findfont: score(FontEntry(fname='C:\\Windows\\Fonts\\STENCIL.TTF', name='Stencil', style='normal', variant='normal', weight=400, stretch='normal', size='scalable')) = 10.05
 matplotlib.font_manager - DEBUG - findfont: Matching sans\-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=9.0 to DejaVu Sans ('C:\\Users\\patri\\AppData\\Roaming\\Python\\Python311\\site-packages\\matplotlib\\mpl-data\\fonts\\ttf\\DejaVuSans.ttf') with score of 0.050000.
-root - INFO - Bar plot for ESTADO_CIVIL generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\ESTADO_CIVIL_graph.png
-root - INFO - Bar plot for QTD_Veiculos generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\QTD_Veiculos_graph.png
+root - INFO - Bar plot for CONSERVACAO_VEICULO generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\CONSERVACAO_VEICULO_graph.png
+root - INFO - Bar plot for NOME_PRODUTO generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\NOME_PRODUTO_graph.png
+root - INFO - Bar plot for QTD_VEICULOS generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\QTD_VEICULOS_graph.png
 root - INFO - Bar plot for SEXO generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\SEXO_graph.png
+root - INFO - Bar plot for ESTADO_CIVIL generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\ESTADO_CIVIL_graph.png
 root - INFO - Bar plot for COD_PODER_AQUISITIVO generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\COD_PODER_AQUISITIVO_graph.png
-root - INFO - Bar plot for Tipo Demissao generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\Tipo Demissao_graph.png
-root - INFO - Bar plot for Causa Desligue generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\Causa Desligue_graph.png
-root - INFO - Bar plot for Escolaridade_Jobs generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\Escolaridade_Jobs_graph.png
+root - INFO - Bar plot for FLAG_PROP_MOD_PERFIL_MOBILE generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\FLAG_PROP_MOD_PERFIL_MOBILE_graph.png
+root - INFO - Bar plot for FLAG_E_COMMERCE generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\FLAG_E_COMMERCE_graph.png
+root - INFO - Bar plot for FLAG_PROP_MOD_PERFIL_COMPRA_INTERNET generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\FLAG_PROP_MOD_PERFIL_COMPRA_INTERNET_graph.png
+root - INFO - Bar plot for FLAG_PROP_MOD_CACADOR_DESCONTOS generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\FLAG_PROP_MOD_CACADOR_DESCONTOS_graph.png
+root - INFO - Bar plot for FLAG_SEGURO_VEICULO generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\FLAG_SEGURO_VEICULO_graph.png
+root - INFO - Bar plot for FLAG_PROP_MOD_PERFIL_SEGURO_AUTO generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\FLAG_PROP_MOD_PERFIL_SEGURO_AUTO_graph.png
+root - INFO - Bar plot for FLAG_PROP_MOD_PERFIL_FINAN_VEIC generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\FLAG_PROP_MOD_PERFIL_FINAN_VEIC_graph.png
+root - INFO - Bar plot for FLAG_PERFIL_INVESTIDOR generated successfully. Path: Domain/Relatorio/Functions/Graphs/temp - graphs\FLAG_PERFIL_INVESTIDOR_graph.png
+root - ERROR - Failed to generate bar plot for SERVIDOR_PUBLICO: 'True: boolean label can not be used without a boolean index'
 root - INFO - Education levels table added.
-root - INFO - No 'PROFISSAO' column found in the data.
-root - INFO - No 'TRABALHO' column found in the data.
-matplotlib.colorbar - DEBUG - locator: <matplotlib.ticker.AutoLocator object at 0x000001B9344DACD0>
-root - INFO - Section: Introduction, Content: The dataset contains 8368 rows and the following columns:
-CPF, NASC, ESCOLARIDADE, ESTADO_CIVIL, RENDA_PRESUMIDA, QTD_Veiculos, SEXO
-COD_PODER_AQUISITIVO, Regional, Filial, inicio_treinamento, termino_treinamento
-Entrega_operacao, Instrutor, Fonte, Nascimento, Idade, DataDem, Status Discovery
-Tipo Demissao, DataAdm, Dias Desligue, Causa Desligue, Escolaridade_Jobs
-Distancia
+root - INFO - Table_Top 10 prof table added.
+root - INFO - Top 10 prof_col by average income table added.
+root - INFO - Top 10 prof_col by average income table added (No Filter).
+root - INFO - No 'UF' or 'ESTADO' columns found or no columns with state values.
+matplotlib.colorbar - DEBUG - locator: <matplotlib.ticker.AutoLocator object at 0x0000016426600590>
+root - INFO - Section: Introduction, Content: The dataset contains 745 rows, 32 columns, and a total of 23840 data points in Analisis_Carro_Leilao.
+The columns are:
+COD_CONTRATO, DOC, DT_RETOMADA, VL_MOLICAR_ENTRADA, DESVALORIZACAO_ENTRADA
+VL_BNDU, MARCA, MODELO, ANO_MODELO, PATIO, CONSERVACAO_VEICULO, VL_VENDA
+DT_VENDA, DIAS_ATRASO, NOME_PRODUTO, QTD_VEICULOS, SEXO, NASC, ESTADO_CIVIL
+ESCOLARIDADE, PROFISSAO, RENDA_PRESUMIDA, COD_PODER_AQUISITIVO
+FLAG_PROP_MOD_PERFIL_MOBILE, FLAG_E_COMMERCE
+FLAG_PROP_MOD_PERFIL_COMPRA_INTERNET, FLAG_PROP_MOD_CACADOR_DESCONTOS
+FLAG_SEGURO_VEICULO, FLAG_PROP_MOD_PERFIL_SEGURO_AUTO
+FLAG_PROP_MOD_PERFIL_FINAN_VEIC, FLAG_PERFIL_INVESTIDOR, SERVIDOR_PUBLICO
 root - INFO - Section: Column Info, Content: <class 'pandas.core.frame.DataFrame'>
-RangeIndex: 8368 entries, 0 to 8367
-Data columns (total 25 columns):
- #   Column                Non-Null Count  Dtype         
----  ------                --------------  -----         
- 0   CPF                   8368 non-null   int64         
- 1   NASC                  8049 non-null   datetime64[ns]
- 2   ESCOLARIDADE          3033 non-null   object        
- 3   ESTADO_CIVIL          456 non-null    object        
- 4   RENDA_PRESUMIDA       6197 non-null   float64       
- 5   QTD_Veiculos          118 non-null    object        
- 6   SEXO                  7894 non-null   object        
- 7   COD_PODER_AQUISITIVO  5234 non-null   object        
- 8   Regional              8368 non-null   object        
- 9   Filial                8368 non-null   object        
- 10  inicio_treinamento    8368 non-null   object        
- 11  termino_treinamento   8368 non-null   object        
- 12  Entrega_operacao      8368 non-null   object        
- 13  Instrutor             8368 non-null   object        
- 14  Fonte                 8368 non-null   object        
- 15  Nascimento            8368 non-null   object        
- 16  Idade                 8368 non-null   object        
- 17  DataDem               8368 non-null   object        
- 18  Status Discovery      8368 non-null   object        
- 19  Tipo Demissao         8368 non-null   object        
- 20  DataAdm               8368 non-null   object        
- 21  Dias Desligue         8368 non-null   object        
- 22  Causa Desligue        8368 non-null   object        
- 23  Escolaridade_Jobs     8368 non-null   object        
- 24  Distancia             8368 non-null   object        
-dtypes: datetime64[ns](1), float64(1), int64(1), object(22)
-memory usage: 1.6+ MB
+RangeIndex: 745 entries, 0 to 744
+Data columns (total 32 columns):
+ #   Column                                Non-Null Count  Dtype         
+---  ------                                --------------  -----         
+ 0   COD_CONTRATO                          745 non-null    object        
+ 1   DOC                                   745 non-null    object        
+ 2   DT_RETOMADA                           745 non-null    object        
+ 3   VL_MOLICAR_ENTRADA                    745 non-null    object        
+ 4   DESVALORIZACAO_ENTRADA                745 non-null    object        
+ 5   VL_BNDU                               745 non-null    object        
+ 6   MARCA                                 745 non-null    object        
+ 7   MODELO                                745 non-null    object        
+ 8   ANO_MODELO                            745 non-null    object        
+ 9   PATIO                                 745 non-null    object        
+ 10  CONSERVACAO_VEICULO                   745 non-null    object        
+ 11  VL_VENDA                              745 non-null    object        
+ 12  DT_VENDA                              745 non-null    object        
+ 13  DIAS_ATRASO                           745 non-null    object        
+ 14  NOME_PRODUTO                          745 non-null    object        
+ 15  QTD_VEICULOS                          120 non-null    object        
+ 16  SEXO                                  744 non-null    object        
+ 17  NASC                                  745 non-null    datetime64[ns]
+ 18  ESTADO_CIVIL                          123 non-null    object        
+ 19  ESCOLARIDADE                          553 non-null    object        
+ 20  PROFISSAO                             586 non-null    object        
+ 21  RENDA_PRESUMIDA                       737 non-null    float64       
+ 22  COD_PODER_AQUISITIVO                  489 non-null    object        
+ 23  FLAG_PROP_MOD_PERFIL_MOBILE           728 non-null    object        
+ 24  FLAG_E_COMMERCE                       728 non-null    float64       
+ 25  FLAG_PROP_MOD_PERFIL_COMPRA_INTERNET  728 non-null    object        
+ 26  FLAG_PROP_MOD_CACADOR_DESCONTOS       728 non-null    object        
+ 27  FLAG_SEGURO_VEICULO                   728 non-null    float64       
+ 28  FLAG_PROP_MOD_PERFIL_SEGURO_AUTO      728 non-null    object        
+ 29  FLAG_PROP_MOD_PERFIL_FINAN_VEIC       728 non-null    object        
+ 30  FLAG_PERFIL_INVESTIDOR                728 non-null    float64       
+ 31  SERVIDOR_PUBLICO                      43 non-null     object        
+dtypes: datetime64[ns](1), float64(4), object(27)
+memory usage: 186.4+ KB
 
 root - INFO - Section: Column Info Transformed, Content: <class 'pandas.core.frame.DataFrame'>
-RangeIndex: 8368 entries, 0 to 8367
-Data columns (total 25 columns):
- #   Column                Non-Null Count  Dtype         
----  ------                --------------  -----         
- 0   CPF                   8368 non-null   int64         
- 1   NASC                  8049 non-null   datetime64[ns]
- 2   ESCOLARIDADE          3033 non-null   object        
- 3   ESTADO_CIVIL          456 non-null    object        
- 4   RENDA_PRESUMIDA       6197 non-null   float64       
- 5   QTD_Veiculos          118 non-null    float64       
- 6   SEXO                  7894 non-null   object        
- 7   COD_PODER_AQUISITIVO  5234 non-null   float64       
- 8   Regional              8368 non-null   object        
- 9   Filial                8368 non-null   object        
- 10  inicio_treinamento    8368 non-null   int64         
- 11  termino_treinamento   8368 non-null   int64         
- 12  Entrega_operacao      8368 non-null   int64         
- 13  Instrutor             8368 non-null   object        
- 14  Fonte                 8368 non-null   object        
- 15  Nascimento            8368 non-null   object        
- 16  Idade                 8368 non-null   object        
- 17  DataDem               8368 non-null   object        
- 18  Status Discovery      8368 non-null   object        
- 19  Tipo Demissao         8368 non-null   object        
- 20  DataAdm               8368 non-null   object        
- 21  Dias Desligue         8368 non-null   object        
- 22  Causa Desligue        8368 non-null   object        
- 23  Escolaridade_Jobs     8368 non-null   object        
- 24  Distancia             8368 non-null   object        
-dtypes: datetime64[ns](1), float64(3), int64(4), object(17)
-memory usage: 1.6+ MB
+RangeIndex: 745 entries, 0 to 744
+Data columns (total 32 columns):
+ #   Column                                Non-Null Count  Dtype         
+---  ------                                --------------  -----         
+ 0   COD_CONTRATO                          745 non-null    int64         
+ 1   DOC                                   745 non-null    int64         
+ 2   DT_RETOMADA                           745 non-null    int64         
+ 3   VL_MOLICAR_ENTRADA                    745 non-null    float64       
+ 4   DESVALORIZACAO_ENTRADA                745 non-null    int64         
+ 5   VL_BNDU                               745 non-null    float64       
+ 6   MARCA                                 745 non-null    object        
+ 7   MODELO                                745 non-null    object        
+ 8   ANO_MODELO                            745 non-null    int64         
+ 9   PATIO                                 745 non-null    object        
+ 10  CONSERVACAO_VEICULO                   745 non-null    int64         
+ 11  VL_VENDA                              745 non-null    float64       
+ 12  DT_VENDA                              745 non-null    int64         
+ 13  DIAS_ATRASO                           745 non-null    int64         
+ 14  NOME_PRODUTO                          745 non-null    object        
+ 15  QTD_VEICULOS                          120 non-null    float64       
+ 16  SEXO                                  744 non-null    object        
+ 17  NASC                                  745 non-null    datetime64[ns]
+ 18  ESTADO_CIVIL                          123 non-null    object        
+ 19  ESCOLARIDADE                          553 non-null    object        
+ 20  PROFISSAO                             586 non-null    object        
+ 21  RENDA_PRESUMIDA                       737 non-null    float64       
+ 22  COD_PODER_AQUISITIVO                  489 non-null    float64       
+ 23  FLAG_PROP_MOD_PERFIL_MOBILE           745 non-null    bool          
+ 24  FLAG_E_COMMERCE                       745 non-null    bool          
+ 25  FLAG_PROP_MOD_PERFIL_COMPRA_INTERNET  745 non-null    bool          
+ 26  FLAG_PROP_MOD_CACADOR_DESCONTOS       745 non-null    bool          
+ 27  FLAG_SEGURO_VEICULO                   745 non-null    bool          
+ 28  FLAG_PROP_MOD_PERFIL_SEGURO_AUTO      745 non-null    bool          
+ 29  FLAG_PROP_MOD_PERFIL_FINAN_VEIC       745 non-null    bool          
+ 30  FLAG_PERFIL_INVESTIDOR                745 non-null    bool          
+ 31  SERVIDOR_PUBLICO                      43 non-null     object        
+dtypes: bool(8), datetime64[ns](1), float64(6), int64(8), object(9)
+memory usage: 145.6+ KB
 
-root - INFO - Section: Transformed Columns, Content: Converted to datetime: inicio_treinamento, termino_treinamento, Entrega_operacao
-Nascimento, DataDem, DataAdm
-
-Converted to int: QTD_Veiculos
-COD_PODER_AQUISITIVO, inicio_treinamento, termino_treinamento
-Entrega_operacao
-
-Converted to bool: 
-
-root - INFO - Section: Integer Columns, Content: CPF, inicio_treinamento, termino_treinamento, Entrega_operacao
-root - INFO - Section: Float Columns, Content: RENDA_PRESUMIDA, QTD_Veiculos, COD_PODER_AQUISITIVO
-root - INFO - Section: String Columns, Content: ESCOLARIDADE, ESTADO_CIVIL, SEXO, Regional, Filial, Instrutor, Fonte, Nascimento
-Idade, DataDem, Status Discovery, Tipo Demissao, DataAdm, Dias Desligue
-Causa Desligue, Escolaridade_Jobs, Distancia
-root - INFO - Section: Boolean Columns, Content: 
-root - INFO - Section: Table_Unique Values Count, Content: Table(
- rowHeights=[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None],
+root - INFO - Section: Integer Columns, Content: COD_CONTRATO, DOC, DT_RETOMADA, DESVALORIZACAO_ENTRADA, ANO_MODELO
+CONSERVACAO_VEICULO, DT_VENDA, DIAS_ATRASO
+root - INFO - Section: Float Columns, Content: VL_MOLICAR_ENTRADA, VL_BNDU, VL_VENDA, QTD_VEICULOS, RENDA_PRESUMIDA
+COD_PODER_AQUISITIVO
+root - INFO - Section: String Columns, Content: MARCA, MODELO, PATIO, NOME_PRODUTO, SEXO, ESTADO_CIVIL, ESCOLARIDADE, PROFISSAO
+SERVIDOR_PUBLICO
+root - INFO - Section: Boolean Columns, Content: FLAG_PROP_MOD_PERFIL_MOBILE
+FLAG_E_COMMERCE
+FLAG_PROP_MOD_PERFIL_COMPRA_INTERNET
+FLAG_PROP_MOD_CACADOR_DESCONTOS
+FLAG_SEGURO_VEICULO
+FLAG_PROP_MOD_PERFIL_SEGURO_AUTO
+FLAG_PROP_MOD_PERFIL_FINAN_VEIC
+FLAG_PERFIL_INVESTIDOR
+root - INFO - Section: Table_Unique Values Count (Part 1), Content: Table(
+ rowHeights=[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None],
  colWidths=[440, 120],
 [['Column Name', 'Unique Values Count'],
-   ['CPF', '8027'],
-   ['NASC', '4490'],
-   ['ESCOLARIDADE', '16'],
-   ['ESTADO_CIVIL', '5'],
-   ['RENDA_PRESUMIDA', '506'],
-   ['QTD_Veiculos', '3'],
-   ['SEXO', '3'],
-   ['COD_PODER_AQUISITIVO', '7'],
-   ['Regional', '79'],
-   ['Filial', '8'],
-   ['inicio_treinamento', '67'],
-   ['termino_treinamento', '75'],
-   ['Entrega_operacao', '70'],
-   ['Instrutor', '173'],
-   ['Fonte', '20'],
-   ['Nascimento', '3357'],
-   ['Idade', '3375'],
-   ['DataDem', '192'],
-   ['Status Discovery', '10'],
-   ['Tipo Demissao', '2'],
-   ['DataAdm', '197'],
-   ['Dias Desligue', '168'],
-   ['Causa Desligue', '4'],
-   ['Escolaridade_Jobs', '5'],
-   ['Distancia', '1865']]
+   ['COD_CONTRATO', 744],
+   ['DOC', 743],
+   ['DT_RETOMADA', 155],
+   ['VL_MOLICAR_ENTRADA', 715],
+   ['DESVALORIZACAO_ENTRADA', 8],
+   ['VL_BNDU', 721],
+   ['MARCA', 30],
+   ['MODELO', 441],
+   ['ANO_MODELO', 23],
+   ['PATIO', 31],
+   ['CONSERVACAO_VEICULO', 3],
+   ['VL_VENDA', 384],
+   ['DT_VENDA', 86],
+   ['DIAS_ATRASO', 180],
+   ['NOME_PRODUTO', 3],
+   ['QTD_VEICULOS', 7],
+   ['SEXO', 3],
+   ['NASC', 729],
+   ['ESTADO_CIVIL', 5],
+   ['ESCOLARIDADE', 15],
+   ['PROFISSAO', 242],
+   ['RENDA_PRESUMIDA', 337],
+   ['COD_PODER_AQUISITIVO', 7],
+   ['FLAG_PROP_MOD_PERFIL_MOBILE', 2],
+   ['FLAG_E_COMMERCE', 2],
+   ['FLAG_PROP_MOD_PERFIL_COMPRA_INTERNET', 2],
+   ['FLAG_PROP_MOD_CACADOR_DESCONTOS', 2],
+   ['FLAG_SEGURO_VEICULO', 2],
+   ['FLAG_PROP_MOD_PERFIL_SEGURO_AUTO', 2],
+   ['FLAG_PROP_MOD_PERFIL_FINAN_VEIC', 2]]
 ) # end table
-root - INFO - Section: Possible IDs, Content: CPF
-root - INFO - Section: Graph_Bar Plot for ESTADO_CIVIL, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\ESTADO_CIVIL_graph.png
-root - INFO - Section: Graph_Bar Plot for QTD_Veiculos, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\QTD_Veiculos_graph.png
+root - INFO - Section: Table_Unique Values Count (Part 2), Content: Table(
+ rowHeights=[None, None, None],
+ colWidths=[440, 120],
+[['Column Name', 'Unique Values Count'],
+   ['FLAG_PERFIL_INVESTIDOR', 2],
+   ['SERVIDOR_PUBLICO', 1]]
+) # end table
+root - INFO - Section: Possible IDs, Content: COD_CONTRATO, DOC, VL_MOLICAR_ENTRADA, VL_BNDU, NASC
+root - INFO - Section: Graph_Bar Plot for CONSERVACAO_VEICULO, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\CONSERVACAO_VEICULO_graph.png
+root - INFO - Section: Graph_Bar Plot for NOME_PRODUTO, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\NOME_PRODUTO_graph.png
+root - INFO - Section: Graph_Bar Plot for QTD_VEICULOS, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\QTD_VEICULOS_graph.png
 root - INFO - Section: Graph_Bar Plot for SEXO, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\SEXO_graph.png
+root - INFO - Section: Graph_Bar Plot for ESTADO_CIVIL, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\ESTADO_CIVIL_graph.png
 root - INFO - Section: Graph_Bar Plot for COD_PODER_AQUISITIVO, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\COD_PODER_AQUISITIVO_graph.png
-root - INFO - Section: Graph_Bar Plot for Tipo Demissao, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\Tipo Demissao_graph.png
-root - INFO - Section: Graph_Bar Plot for Causa Desligue, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\Causa Desligue_graph.png
-root - INFO - Section: Graph_Bar Plot for Escolaridade_Jobs, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\Escolaridade_Jobs_graph.png
+root - INFO - Section: Graph_Bar Plot for FLAG_PROP_MOD_PERFIL_MOBILE, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\FLAG_PROP_MOD_PERFIL_MOBILE_graph.png
+root - INFO - Section: Graph_Bar Plot for FLAG_E_COMMERCE, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\FLAG_E_COMMERCE_graph.png
+root - INFO - Section: Graph_Bar Plot for FLAG_PROP_MOD_PERFIL_COMPRA_INTERNET, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\FLAG_PROP_MOD_PERFIL_COMPRA_INTERNET_graph.png
+root - INFO - Section: Graph_Bar Plot for FLAG_PROP_MOD_CACADOR_DESCONTOS, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\FLAG_PROP_MOD_CACADOR_DESCONTOS_graph.png
+root - INFO - Section: Graph_Bar Plot for FLAG_SEGURO_VEICULO, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\FLAG_SEGURO_VEICULO_graph.png
+root - INFO - Section: Graph_Bar Plot for FLAG_PROP_MOD_PERFIL_SEGURO_AUTO, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\FLAG_PROP_MOD_PERFIL_SEGURO_AUTO_graph.png
+root - INFO - Section: Graph_Bar Plot for FLAG_PROP_MOD_PERFIL_FINAN_VEIC, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\FLAG_PROP_MOD_PERFIL_FINAN_VEIC_graph.png
+root - INFO - Section: Graph_Bar Plot for FLAG_PERFIL_INVESTIDOR, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\FLAG_PERFIL_INVESTIDOR_graph.png
+root - INFO - Section: Bar Plot for SERVIDOR_PUBLICO, Content: Graph generation failed
 root - INFO - Section: Table_Education Levels, Content: Table(
- rowHeights=[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None],
+ rowHeights=[None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None],
  colWidths=[500, 80],
 [['Nível de educação', 'Quantidade'],
-   ['ENSINO MEDIO COMPLETO', '1774'],
-   ['SUPERIOR COMPLETO', '473'],
-   ['ENSINO MEDIO INCOMPLETO', '232'],
-   ['ENSINO FUNDAMENTAL COMPLETO', '225'],
-   ['SUPERIOR INCOMPLETO', '217'],
-   ['TECNOLOGO INCOMPLETO', '20'],
-   ['TECNICO COMPLETO', '19'],
-   ['POS-GRADUACAO COMPLETO', '16'],
-   ['TECNOLOGO COMPLETO', '15'],
-   ['TECNICO INCOMPLETO', '13'],
-   ['SUPERIOR COMPLETO             ', '8'],
-   ['SUPERIOR INCOMPLETO           ', '8'],
-   ['PRIMARIO COMPLETO             ', '6'],
-   ['ENSINO FUNDAMENTAL INCOMPLETO', '4'],
-   ['PRIMARIO COMPLETO', '2'],
+   ['ENSINO MEDIO COMPLETO', '226'],
+   ['SUPERIOR COMPLETO', '132'],
+   ['ENSINO FUNDAMENTAL COMPLETO', '102'],
+   ['ENSINO MEDIO INCOMPLETO', '34'],
+   ['ENSINO FUNDAMENTAL INCOMPLETO', '17'],
+   ['SUPERIOR INCOMPLETO', '11'],
+   ['PRIMARIO INCOMPLETO', '6'],
+   ['PRIMARIO COMPLETO', '6'],
+   ['PRIMARIO COMPLETO             ', '4'],
+   ['SUPERIOR COMPLETO             ', '4'],
+   ['TECNICO COMPLETO', '3'],
+   ['SUPERIOR INCOMPLETO           ', '3'],
+   ['TECNOLOGO COMPLETO', '3'],
+   ['ANALFABETO', '1'],
    ['PRIMARIO INCOMPLETO           ', '1']]
+) # end table
+root - INFO - Section: Table_Top 10 prof, Content: Table(
+ rowHeights=[None, None, None, None, None, None, None, None, None, None, None],
+ colWidths=[520, 80],
+[['Profissão', 'Qtd'],
+   ['ADMINISTRADOR', '51'],
+   ['Vendedor de comercio varejista', '24'],
+   ['FAXINEIRO', '23'],
+   ['AUXILIAR ADMINISTRATIVO', '18'],
+   ['ASSISTENTE ADMINISTRATIVO', '16'],
+   ['ALIMENTADOR DE LINHA DE PRODUCAO', '14'],
+   ['REPOSITOR DE MERCADORIAS', '13'],
+   ['TRABALHADOR DE SERVICOS DE LIMPEZA E CONSERVACAO DE AREAS PUBLICAS', '11'],
+   ['MOTORISTA DE CAMINHAO (ROTAS REGIONAIS E INTERNACIONAIS)', '11'],
+   ['Cozinheiro geral', '11']]
+) # end table
+root - INFO - Section: RENDA_PRESUMIDA Summary Statistics, Content: count      737.000000
+mean      2236.824966
+std       3593.833323
+min        788.000000
+25%        844.000000
+50%       1034.000000
+75%       2000.000000
+max      31500.000000
+root - INFO - Section: Table_Top 10 prof_col by Renda, Content: Table(
+ rowHeights=[None, None, None, None, None, None, None, None, None, None, None],
+ colWidths=[420, 80, 50],
+[['Profissão', 'Renda Média', 'Qtd'],
+   ['MOTORISTA DE ONIBUS URBANO', '5720.14', '7'],
+   ['ALMOXARIFE', '3553.50', '4'],
+   ['PORTEIRO DE EDIFICIOS', '3473.75', '8'],
+   ['Vendedor de comercio varejista', '3384.67', '24'],
+   ['MOTORISTA DE FURGAO OU VEICULO SIMILAR', '3315.00', '5'],
+   ['OPERADOR DE CAIXA', '3036.40', '10'],
+   ['ASSISTENTE ADMINISTRATIVO', '2829.12', '16'],
+   ['MOTORISTA DE CAMINHAO (ROTAS REGIONAIS E INTERNACIONAIS)', '2608.18', '11'],
+   ['Vigilante', '2466.00', '4'],
+   ['ADMINISTRADOR', '2242.84', '51']]
+) # end table
+root - INFO - Section: Table_Top 10 prof_col by Renda (No Filter), Content: Table(
+ rowHeights=[None, None, None, None, None, None, None, None, None, None, None],
+ colWidths=[420, 80, 50],
+[['Profissão', 'Renda Média', 'Qtd'],
+   ['SUPERVISOR DE CAIXAS E BILHETEIROS EXCETO CAIXA DE BANCO ', '31500.00', '1'],
+   ['ANALISTA DE RECURSOS HUMANOS', '25500.00', '1'],
+   ['TECNICO EM PATOLOGIA CLINICA', '25500.00', '1'],
+   ['OPERADOR DE CAMERA DE TELEVISAO', '22500.00', '1'],
+   ['AFRETADOR', '19500.00', '1'],
+   ['GERENTE DE VENDAS', '19500.00', '1'],
+   ['PROFESSOR DE ENSINO SUPERIOR NA AREA DE PRATICA DE ENSINO', '19500.00', '1'],
+   ['PROMOTOR DE VENDAS ESPECIALIZADO', '19500.00', '2'],
+   ['DEFENSOR PUBLICO', '16500.00', '1'],
+   ['SUPERVISORES DE VENDAS E DE PRESTAÇÃO DE SERVIÇOS', '13725.00', '1']]
 ) # end table
 root - INFO - Section: Graph_Correlation Plot, Content: Domain/Relatorio/Functions/Graphs/temp - graphs\correlation_plot.png
 PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
 PIL.PngImagePlugin - DEBUG - STREAM b'tEXt' 41 57
 PIL.PngImagePlugin - DEBUG - STREAM b'pHYs' 110 9
-PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 27602
+PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 19080
 PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
 PIL.PngImagePlugin - DEBUG - STREAM b'tEXt' 41 57
 PIL.PngImagePlugin - DEBUG - STREAM b'pHYs' 110 9
-PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 16817
+PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 22778
 PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
 PIL.PngImagePlugin - DEBUG - STREAM b'tEXt' 41 57
 PIL.PngImagePlugin - DEBUG - STREAM b'pHYs' 110 9
-PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 16662
+PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 19307
 PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
 PIL.PngImagePlugin - DEBUG - STREAM b'tEXt' 41 57
 PIL.PngImagePlugin - DEBUG - STREAM b'pHYs' 110 9
-PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 22037
+PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 17065
 PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
 PIL.PngImagePlugin - DEBUG - STREAM b'tEXt' 41 57
 PIL.PngImagePlugin - DEBUG - STREAM b'pHYs' 110 9
-PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 24850
+PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 25871
 PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
 PIL.PngImagePlugin - DEBUG - STREAM b'tEXt' 41 57
 PIL.PngImagePlugin - DEBUG - STREAM b'pHYs' 110 9
-PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 31732
+PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 23567
 PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
 PIL.PngImagePlugin - DEBUG - STREAM b'tEXt' 41 57
 PIL.PngImagePlugin - DEBUG - STREAM b'pHYs' 110 9
-PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 44121
+PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 19957
+PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+PIL.PngImagePlugin - DEBUG - STREAM b'tEXt' 41 57
+PIL.PngImagePlugin - DEBUG - STREAM b'pHYs' 110 9
+PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 19281
+PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+PIL.PngImagePlugin - DEBUG - STREAM b'tEXt' 41 57
+PIL.PngImagePlugin - DEBUG - STREAM b'pHYs' 110 9
+PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 21494
+PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+PIL.PngImagePlugin - DEBUG - STREAM b'tEXt' 41 57
+PIL.PngImagePlugin - DEBUG - STREAM b'pHYs' 110 9
+PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 22676
+PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+PIL.PngImagePlugin - DEBUG - STREAM b'tEXt' 41 57
+PIL.PngImagePlugin - DEBUG - STREAM b'pHYs' 110 9
+PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 19898
+PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+PIL.PngImagePlugin - DEBUG - STREAM b'tEXt' 41 57
+PIL.PngImagePlugin - DEBUG - STREAM b'pHYs' 110 9
+PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 19532
+PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+PIL.PngImagePlugin - DEBUG - STREAM b'tEXt' 41 57
+PIL.PngImagePlugin - DEBUG - STREAM b'pHYs' 110 9
+PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 19043
+PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+PIL.PngImagePlugin - DEBUG - STREAM b'tEXt' 41 57
+PIL.PngImagePlugin - DEBUG - STREAM b'pHYs' 110 9
+PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 19461
 PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
 PIL.PngImagePlugin - DEBUG - STREAM b'tEXt' 41 57
 PIL.PngImagePlugin - DEBUG - STREAM b'pHYs' 110 9
 PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 131 65536
 root - DEBUG - Directory: 
 root - DEBUG - Filename: output-generico.pdf
-werkzeug - INFO - 127.0.0.1 - - [06/Aug/2024 15:53:21] "GET /generate-pdf-generic?server=server4.iu360.com.br&database=TEMP_DScience&table=CallCent_Almaviva HTTP/1.1" 200 -
+werkzeug - INFO - 127.0.0.1 - - [17/Sep/2024 10:00:29] "GET /generate-pdf-generic?server=server4.iu360.com.br&database=TEMP_DScience&table=Analisis_Carro_Leilao HTTP/1.1" 200 -

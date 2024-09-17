@@ -4,15 +4,16 @@ import seaborn as sns
 import os
 import uuid
 
-def generate_heatmap(df, column, min_count=10, base_dir='/Domain/Relatorio/Functions/Graphs/tempt-graphs'):
+def generate_heatmap(df, column, base_dir='/Domain/Relatorio/Functions/Graphs/tempt-graphs', title=None, min_count=10):
     """
     Generate a heatmap for the specified column in the DataFrame.
 
     Parameters:
     df (pd.DataFrame): DataFrame containing the data.
     column (str): Column name for which to generate the heatmap.
-    min_count (int): Minimum count to include in the heatmap.
     base_dir (str): Directory to save the generated heatmap.
+    title (str): Title of the heatmap.
+    min_count (int): Minimum count to include in the heatmap.
 
     Returns:
     str: Path to the saved heatmap image.
@@ -36,22 +37,25 @@ def generate_heatmap(df, column, min_count=10, base_dir='/Domain/Relatorio/Funct
 
     # Step 5: Create the heatmap using Seaborn
     plt.figure(figsize=(12, 15))
-    heatmap_data_sorted = heatmap_data.sort_values('COUNT', ascending=False)
-
     sns.heatmap(
-        heatmap_data_sorted[['COUNT']],
+        heatmap_data.pivot_table(index=column, values='COUNT'),
         annot=True,
         fmt='d',
         cmap='viridis',
-        cbar_kws={'label': 'Count'},
-        yticklabels=heatmap_data_sorted[column]
+        cbar_kws={'label': 'Count'}
     )
-    plt.title(f'{column} Value Counts Heatmap')
+
+    # Set the title with the column name
+    plt.title(f'{title if title else column} Value Counts Heatmap')
     plt.ylabel(column)
 
     # Generate a unique filename using uuid
     unique_filename = f'heatmap_{column}_{uuid.uuid4().hex}.png'
     file_path = os.path.join(base_dir, unique_filename)
+
+    plt.tight_layout()
+    fig = plt.gcf()
+    fig.patch.set_facecolor('white')  # Set the background color of the figure to white
 
     plt.savefig(file_path, bbox_inches='tight')
     plt.close()

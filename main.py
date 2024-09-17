@@ -30,6 +30,7 @@ def add_section_safe(report_dto, section_name, method, *args, **kwargs):
         logging.error(f"Failed to generate '{section_name}' plot: {e}")
         report_dto.add_section(section_name, "Graph generation failed")
 
+
 @app.route('/generate-pdf-generic', methods=['GET'])
 def generate_pdf_generic():
     """
@@ -62,15 +63,15 @@ def generate_pdf_generic():
         database = request.args.get('database')
         table = request.args.get('table')
 
-        # Fetch data
-        df = fetch_data_from_sql(server, database, table)
+        # Fetch data and unpack the tuple
+        df, table_name = fetch_data_from_sql(server, database, table)
 
         # Debug print to inspect the DataFrame
         logging.debug(f"DataFrame columns: {df.columns}")
         logging.debug(f"DataFrame length: {len(df)}")
 
         generico = GenericReport()
-        report_dto = generico.create_report(df)
+        report_dto = generico.create_report(server, database, table_name)
 
         # Log the sections added to the report
         for section_title, content in report_dto.get_sections().items():
