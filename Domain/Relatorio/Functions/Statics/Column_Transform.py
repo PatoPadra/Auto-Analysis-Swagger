@@ -106,6 +106,9 @@ def Data_info_and_transform(data, report_dto, added_sections, table=None):
     except Exception as e:
         logging.error(f"Failed to add transformed columns section: {e}")
 
+    # Initialize column lists to avoid referencing undefined variables in case of failure
+    int_columns, float_columns, str_columns, bool_columns = [], [], [], []
+
     try:
         # Separate columns by data type
         int_columns = data.select_dtypes(include='int').columns.tolist()
@@ -127,3 +130,4 @@ def Data_info_and_transform(data, report_dto, added_sections, table=None):
         logging.error(f"Failed to add data type sections: {e}")
 
     return data, int_columns, float_columns, str_columns, bool_columns
+

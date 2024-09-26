@@ -1,4 +1,5 @@
 from ..DTO.relatorioDTO import ReportDTO
+import pandas as pd
 from .Functions.Tables.Education import make_education_table
 from .Functions.Tables.Work import make_work_table
 from .Functions.Tables.Renda import make_renda_table_more_than_three, make_greater_renda_table
@@ -33,17 +34,27 @@ class GenericReport:
             logging.error(f"Failed to generate bar plot for {column}: {e}")
             report_dto.add_section(f"Bar Plot for {column}", "Graph generation failed")
 
-    def create_report(self, server, database, table):
+    def create_report(self, data=None, server=None, database=None, table=None):
         report_dto = ReportDTO()
-        graph_sections = []
         added_sections = []
+        graph_sections = []
 
-        # Fetch data and table name
-        data, table_name = fetch_data_from_sql(server, database, table)
+        if data is None and server is not None:
+            # Fetch data and table name only if data is not provided
+            data, table_name = fetch_data_from_sql(server, database, table)
+        elif isinstance(data, str):
+            logging.error("Data provided is a string, expected a DataFrame")
+            return None  # Exit or handle the error
 
-        # Perform data info capture and transformation
+        # Ensure that `data` is a DataFrame
+        if not isinstance(data, pd.DataFrame):
+            logging.error("Data is not a valid DataFrame")
+            return None  # Exit or handle the error
+
+        # Proceed with the report generation if data is valid
         data, int_columns, float_columns, str_columns, bool_columns = Data_info_and_transform(
-            data, report_dto, added_sections, table=table_name)
+            data, report_dto, added_sections, table=table
+        )
 
         try:
             # Create unique values table
