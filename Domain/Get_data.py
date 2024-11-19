@@ -3,10 +3,10 @@ from sqlalchemy import create_engine
 
 def fetch_data_from_sql(server, database, table):
     SERVER_NAME = server
-    PORT = '1433'
+    PORT = ''
     DATABASE_NAME = database
-    USERNAME = 'patricio'
-    PASSWORD = 'hLk9347%#'
+    USERNAME = ''
+    PASSWORD = ''
 
     # Construct the connection string using SQLAlchemy's create_engine
     connection_string = (
